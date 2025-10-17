@@ -15,7 +15,8 @@
     gtag('config', 'G-4VBJ4RHNKN');
   </script>
 </head>
-<body>
+<!-- Added a 'homepage' class to apply specific styles -->
+<body class="homepage">
   <header>
     <nav class="navbar">
       <div class="logo">
@@ -29,20 +30,13 @@
     </nav>
   </header>
 
-  <main>
-    <section class="live-stream">
-      <h1>Live Match</h1>
-      <div class="video-container">
-        <!-- The iframe content will be displayed here -->
-        <iframe src="https://www.camel1.live/" frameborder="0" allowfullscreen></iframe>
-      </div>
-    </section>
+  <!-- The 'main' tag now directly holds the full-screen video container -->
+  <main class="live-stream">
+    <div class="video-container">
+      <iframe src="https://www.camel1.live/" frameborder="0" allowfullscreen></iframe>
+    </div>
   </main>
-
-  <footer>
-    <p>&copy; 2025 Myan Sport. All Rights Reserved.</p>
-    <p><a href="privacy.html">Privacy Policy</a></p>
-  </footer>
+  <!-- The footer has been removed from the homepage -->
 
   <script>
     // Toggle menu for mobile
