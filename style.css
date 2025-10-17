@@ -2,15 +2,15 @@
 body {
   font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Helvetica, Arial, sans-serif;
   margin: 0;
-  background-color: #f0f2f5; /* Default background for pages like Privacy */
+  background-color: #f0f2f5;
   color: #333;
   line-height: 1.6;
 }
 
 /* Specific body styles for the homepage to enable the full-screen view */
 body.homepage {
-  background-color: #000; /* Black background for behind the video frame */
-  overflow: hidden;      /* Prevents scrolling on the page */
+  background-color: #000;
+  overflow: hidden; /* Prevents unwanted scrollbars */
 }
 
 /* Header & Navigation */
@@ -18,8 +18,9 @@ header {
   background-color: #fff;
   box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
   padding: 0 20px;
-  position: relative; /* Ensures correct layout calculation */
+  position: relative;
   z-index: 1000;
+  height: 70px; /* Explicit height for calculation */
 }
 
 .navbar {
@@ -28,7 +29,7 @@ header {
   align-items: center;
   max-width: 1200px;
   margin: 0 auto;
-  height: 70px;
+  height: 100%;
 }
 
 .logo a {
@@ -61,17 +62,27 @@ header {
   color: #3f51b5;
 }
 
-/* Mobile Menu */
-.menu-toggle {
-  display: none;
-  font-size: 24px;
-  cursor: pointer;
+/* General style for main content (for Privacy page) */
+main {
+  max-width: 1200px;
+  margin: 20px auto;
+  padding: 20px;
 }
 
-/* === LIVE STREAM SECTION (Full Width & Height) === */
+/* ======================================================= */
+/* === CRUCIAL FIX: Override 'main' styles for homepage === */
+/* This removes the max-width and margin for the live stream container */
+body.homepage .live-stream {
+  max-width: none;
+  margin: 0;
+  padding: 0;
+}
+/* ======================================================= */
+
+/* LIVE STREAM SECTION (Full Width & Height) */
 .live-stream .video-container {
   width: 100%;
-  /* Calculate height: 100% of viewport height MINUS the header's height */
+  /* Calculate height: 100% of the viewport height MINUS the header's height */
   height: calc(100vh - 70px);
 }
 
@@ -81,14 +92,10 @@ header {
   border: none;
 }
 
-/* === PRIVACY POLICY PAGE STYLES === */
-.privacy-container {
-  /* These styles provide the nice centered layout for content pages */
-  max-width: 1200px;
-  margin: 20px auto;
-  padding: 20px;
-}
 
+/* PRIVACY POLICY PAGE STYLES */
+/* We now use .privacy-container class for the main tag on the privacy page */
+/* to avoid conflict with the homepage. */
 .privacy-content {
   max-width: 800px;
   margin: 0 auto;
@@ -106,113 +113,4 @@ header {
 }
 
 .privacy-content .effective-date {
-  text-align: center;
-  color: #666;
-  margin-bottom: 30px;
-  font-style: italic;
-}
-
-.privacy-content h2 {
-  font-size: 1.8em;
-  color: #3f51b5;
-  margin-top: 40px;
-  margin-bottom: 15px;
-  border-bottom: 2px solid #e0e0e0;
-  padding-bottom: 8px;
-}
-
-.privacy-content h3 {
-  font-size: 1.4em;
-  color: #333;
-  margin-top: 25px;
-  margin-bottom: 10px;
-}
-
-.privacy-content p, .privacy-content li {
-  font-size: 1.1em;
-  color: #444;
-}
-
-.privacy-content ul {
-  list-style-type: disc;
-  padding-left: 25px;
-  margin-top: 15px;
-}
-
-.privacy-content li {
-  margin-bottom: 10px;
-}
-
-.privacy-content a {
-  color: #3f51b5;
-  text-decoration: none;
-  font-weight: 500;
-}
-
-.privacy-content a:hover {
-  text-decoration: underline;
-}
-
-/* Footer (Only for pages like Privacy Policy) */
-footer {
-  text-align: center;
-  padding: 30px;
-  background-color: #333;
-  color: #f4f4f4;
-  margin-top: 40px;
-}
-
-footer a {
-  color: #fff;
-  text-decoration: none;
-}
-
-footer a:hover {
-  text-decoration: underline;
-}
-
-/* Responsive Design */
-@media (max-width: 768px) {
-  .menu-toggle {
-    display: block;
-  }
-
-  .nav-links {
-    display: none;
-    flex-direction: column;
-    width: 100%;
-    position: absolute;
-    top: 70px;
-    left: 0;
-    background-color: #fff;
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
-  }
-
-  .nav-links.active {
-    display: flex;
-  }
-
-  .nav-links li {
-    text-align: center;
-    margin: 0;
-  }
-
-  .nav-links a {
-    display: block;
-    padding: 15px;
-    width: 100%;
-    border-bottom: 1px solid #f0f2f5;
-  }
-
-  .privacy-content {
-    padding: 20px;
-  }
-
-  .privacy-content h1 {
-    font-size: 2.2em;
-  }
-
-  .privacy-content h2 {
-    font-size: 1.5em;
-  }
-}
+  text-align
