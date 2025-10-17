@@ -1,67 +1,65 @@
 <!DOCTYPE html>
 <html lang="en">
-
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Privacy Policy - Myan Sport</title>
     <link rel="stylesheet" href="style.css">
 </head>
-
 <body>
     <header>
-        <nav>
-            <div class="logo">
-                <a href="index.html">Myan Sport</a>
-            </div>
-            <ul>
-                <li><a href="index.html">Home</a></li>
-                <li><a href="#">Highlights</a></li>
-                <li><a href="#">Schedule</a></li>
-                <li><a href="privacy.html">Privacy Policy</a></li>
-            </ul>
-        </nav>
+      <nav class="navbar">
+        <div class="logo">
+          <a href="index.html">Myan Sport</a>
+        </div>
+        <div class="menu-toggle" id="menu-toggle">☰</div>
+        <ul class="nav-links" id="nav-links">
+          <li><a href="index.html">Home</a></li>
+          <li><a href="privacy.html">Privacy Policy</a></li>
+        </ul>
+      </nav>
     </header>
 
-    <main class="privacy-policy">
-        <h1>Privacy Policy</h1>
-        <p><strong>Effective Date:</strong> May 30, 2025</p>
+    <main class="privacy-container">
+        <div class="privacy-content">
+            <h1>Privacy Policy</h1>
+            <p class="effective-date"><strong>Effective Date:</strong> May 30, 2025</p>
 
-        <p>This Privacy Policy describes how information is collected, used, and shared when you use the myan market
-            mobile application ("Application") created by myan market team. By using the Application, you agree to the
-            collection and use of information in accordance with this policy.</p>
+            <p>This Privacy Policy describes how information is collected, used, and shared when you use the Myan Sport mobile application ("Application") created by the Myan Sport team. By using the Application, you agree to the collection and use of information in accordance with this policy.</p>
 
-        <h2>Information Collection and Use</h2>
-        <p>The Application uses third-party services that may collect information used to identify you. Specifically,
-            the Application integrates Audience Network to serve ads.</p>
+            <h2>Information Collection and Use</h2>
+            <p>The Application uses third-party services that may collect information used to identify you. Specifically, the Application integrates Audience Network to serve ads.</p>
 
-        <h3>Audience Network</h3>
-        <p>Audience Network, a service provided by Meta Platforms, Inc. (formerly Facebook), collects and uses data in
-            accordance with its own privacy policies. For more details on how Audience Network collects and uses data,
-            please refer to the Meta Privacy Policy.</p>
+            <h3>Audience Network</h3>
+            <p>Audience Network, a service provided by Meta Platforms, Inc. (formerly Facebook), collects and uses data in accordance with its own privacy policies. For more details on how Audience Network collects and uses data, please refer to the <a href="https://www.facebook.com/privacy/policy/" target="_blank" rel="noopener noreferrer">Meta Privacy Policy</a>.</p>
 
-        <p>The information collected by these services may include, but is not limited to:</p>
-        <ul>
-            <li>Device information (e.g., device type, operating system, unique device identifiers)</li>
-            <li>Log data (e.g., IP address, app usage data, interactions with ads)</li>
-            <li>Location information (if location services are enabled)</li>
-        </ul>
+            <p>The information collected by these services may include, but is not limited to:</p>
+            <ul>
+                <li><strong>Device information</strong> (e.g., device type, operating system, unique device identifiers)</li>
+                <li><strong>Log data</strong> (e.g., IP address, app usage data, interactions with ads)</li>
+                <li><strong>Location information</strong> (if location services are enabled)</li>
+            </ul>
 
-        <h2>Changes to This Privacy Policy</h2>
-        <p>The Service Provider reserves the right to update or change this Privacy Policy at any time. Any changes will
-            be effective immediately upon posting the revised policy on this page. Your continued use of the Application
-            after any modifications to the Privacy Policy will constitute your acknowledgment of the changes and your
-            consent to abide and be bound by the updated policy.</p>
+            <h2>Changes to This Privacy Policy</h2>
+            <p>The Service Provider reserves the right to update or change this Privacy Policy at any time. Any changes will be effective immediately upon posting the revised policy on this page. Your continued use of the Application after any modifications to the Privacy Policy will constitute your acknowledgment of the changes and your consent to abide and be bound by the updated policy.</p>
 
-        <h2>Contact Us</h2>
-        <p>If you have any questions about this Privacy Policy or the practices of the Application, please contact the
-            Service Provider at <a href="mailto:myanmarket13995@gmail.com">myanmarket13995@gmail.com</a>.</p>
+            <h2>Contact Us</h2>
+            <p>If you have any questions about this Privacy Policy or the practices of the Application, please contact the Service Provider at <a href="mailto:myanmarket13995@gmail.com">myanmarket13995@gmail.com</a>.</p>
+        </div>
     </main>
 
     <footer>
         <p>&copy; 2025 Myan Sport. All Rights Reserved.</p>
         <p><a href="privacy.html">Privacy Policy</a></p>
     </footer>
-</body>
 
+    <script>
+      // Toggle menu for mobile
+      const toggle = document.getElementById('menu-toggle');
+      const links = document.getElementById('nav-links');
+      toggle.addEventListener('click', () => {
+        links.classList.toggle('active');
+      });
+    </script>
+</body>
 </html>
