@@ -11,11 +11,10 @@
     window.dataLayer = window.dataLayer || [];
     function gtag(){dataLayer.push(arguments);}
     gtag('js', new Date());
-
     gtag('config', 'G-4VBJ4RHNKN');
   </script>
 </head>
-<!-- Added a 'homepage' class to apply specific styles -->
+
 <body class="homepage">
   <header>
     <nav class="navbar">
@@ -30,13 +29,17 @@
     </nav>
   </header>
 
-  <!-- The 'main' tag now directly holds the full-screen video container -->
   <main class="live-stream">
     <div class="video-container">
-      <iframe src="https://www.camel1.live/" frameborder="0" allowfullscreen></iframe>
+      <!-- ✅ Use your proxy endpoint instead -->
+      <iframe 
+        src="http://localhost:8080/camel" 
+        frameborder="0" 
+        allowfullscreen
+        style="width: 100%; height: 100vh; border: none;">
+      </iframe>
     </div>
   </main>
-  <!-- The footer has been removed from the homepage -->
 
   <script>
     // Toggle menu for mobile
